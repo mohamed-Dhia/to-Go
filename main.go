@@ -1,13 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	todolist "github.com/mohamed-Dhia/to-go/todoList"
+)
 
 func main() {
-	myTodoList := &TodoList{
-		counter: Counter{},
-	}
-	myTodoList.add("brush teeth")
-	myTodoList.add("do stuff")
-	myTodoList.add("do them more")
-	fmt.Println(myTodoList.display())
+	myTodoList := todolist.New()
+	myTodoList.Add("brush teeth")
+	myTodoList.Add("do stuff")
+	myTodoList.Add("do them more")
+	fmt.Printf("%s\n", myTodoList)
 }
